@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
+import logo from '../assets/Logo.png'
 
 const Navbar = () => {
     const [selectedValue, setselectedValue] = useState('eng');
@@ -28,6 +29,11 @@ const Navbar = () => {
                                 <option value='uz'>uzbek</option>
                             </select>
                         </section>
+                    </div>
+                </div>
+                <div className='container mx-auto'>
+                    <div className='ml-[135px] mt-[95px]'>
+                        <img src={logo} alt="" />
                     </div>
                 </div>
             </div>
