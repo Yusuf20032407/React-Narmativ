@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.poppins-heading {
+    font-family: 'Poppins', sans-serif;
+}
+
+.arial-heading {
+    font-family: 'inter', sans-serif;
+}
