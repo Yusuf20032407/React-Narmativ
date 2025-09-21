@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import logo from '../assets/Logo.png'
+import search from '../assets/search.svg'
+import yure from '../assets/yurak.svg'
+import magazin from '../assets/magazin.svg'
+import user from '../assets/user.svg'
 
 const Navbar = () => {
     const [selectedValue, setselectedValue] = useState('eng');
@@ -32,8 +36,27 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className='container mx-auto'>
-                    <div className='ml-[135px] mt-[95px]'>
-                        <img src={logo} alt="" />
+                    <div className='flex items-center mt-[47px] ml-[147px] gap-[190px]'>
+                        <div>
+                            <img src={logo} alt="" />
+                        </div>
+                        <nav className='navbar'>
+                            <Link to='/' className='nav-link text-black'>Home</Link>
+                            <Link to='/contact' className='nav-link text-black'>Contact</Link>
+                            <Link to='/About' className='nav-link text-black'>About</Link>
+                            <Link to='/signup' className='nav-link text-black'>Sign Up</Link>
+                        </nav>
+                        <div className='flex items-center'>
+                            <div className='flex items-center'>
+                                <input className='absolute w-[243px] h-[38px] pl-[20px] bg-[#F5F5F5] rounded-4px' type="text" placeholder='What are you looking for?' />
+                                <img className='relative ml-[207px]' src={search} alt="" />
+                            </div>
+                            <div className='flex items-center ml-[24px] gap-[16px]'>
+                                <img src={yure} alt="yure" />
+                                <img src={magazin} alt="magazin" />
+                                <img src={user} alt="user" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
