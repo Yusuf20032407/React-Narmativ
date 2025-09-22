@@ -19,7 +19,7 @@ const Navbar = () => {
         <>
             <div>
                 <div className='bg-black h-[48px] text-white'>
-                    <div className='flex items-center justify-center gap-[12px] ml-[150px] pt-[12px] pb-[12px]'>
+                    <div className='flex items-center justify-center gap-[12px] ml-[190px] pt-[12px] pb-[12px]'>
                         <p className='font-normal text-sm leading-[21px] tracking-[0%] poppins-heading'>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!</p>
                         <Link className='font-semibold text-sm leading-6 tracking-[0%] text-center underline decoration-solid decoration-[0%] poppins-heading' to='/'>ShopNow</Link>
                         <section className='ml-[260px]'>
@@ -51,7 +51,7 @@ const Navbar = () => {
                                 <input className='absolute w-[243px] h-[38px] pl-[20px] bg-[#F5F5F5] rounded-4px' type="text" placeholder='What are you looking for?' />
                                 <img className='relative ml-[207px]' src={search} alt="" />
                             </div>
-                            <div className='flex items-center ml-[24px] gap-[16px]'>
+                            <div className='flex items-center ml-[24px] gap-[10px]'>
                                 <img src={yure} alt="yure" />
                                 <img src={magazin} alt="magazin" />
                                 <img src={user} alt="user" />
@@ -59,6 +59,7 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
+                <hr className='mt-[16px]' />
             </div>
         </>
     )
