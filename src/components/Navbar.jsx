@@ -19,10 +19,10 @@ const Navbar = () => {
         <>
             <div>
                 <div className='bg-black h-[48px] text-white'>
-                    <div className='flex items-center justify-center gap-[12px] ml-[190px] pt-[12px] pb-[12px]'>
+                    <div className='flex items-center justify-center gap-[12px] ml-[280px] pt-[12px] pb-[12px]'>
                         <p className='font-normal text-sm leading-[21px] tracking-[0%] poppins-heading'>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!</p>
                         <Link className='font-semibold text-sm leading-6 tracking-[0%] text-center underline decoration-solid decoration-[0%] poppins-heading' to='/'>ShopNow</Link>
-                        <section className='ml-[260px]'>
+                        <section className='ml-[250px]'>
                             <select id='mySelect'
                                 value={selectedValue}
                                 onChange={handleCHange}
@@ -47,7 +47,7 @@ const Navbar = () => {
                             <Link to='/signup' className='nav-link text-black'>Sign Up</Link>
                         </nav>
                         <div className='flex items-center'>
-                            <div className='flex items-center'>
+                            <div className='flex items-center ml-[-40px]'>
                                 <input className='absolute w-[243px] h-[38px] pl-[20px] bg-[#F5F5F5] rounded-4px' type="text" placeholder='What are you looking for?' />
                                 <img className='relative ml-[207px]' src={search} alt="" />
                             </div>
