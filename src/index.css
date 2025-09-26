@@ -34,3 +34,8 @@
 .nav-link:hover::after {
     width: 100%;
 }
+
+.hover:active{
+    background-color: red;
+    border-radius: 50%;
+}

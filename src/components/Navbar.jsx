@@ -5,6 +5,70 @@ import search from '../assets/search.svg'
 import yure from '../assets/yurak.svg'
 import magazin from '../assets/magazin.svg'
 import user from '../assets/user.svg'
+import { Dropdown, Space } from 'antd';
+import mallbag from '../assets/icon-mallbag.svg'
+import cancel from '../assets/icon-cancel.svg'
+import reviews from '../assets/icon-Reviews.svg'
+import logout from '../assets/icon-logout.svg'
+
+
+const items = [
+    {
+        label: (
+            <div className='flex items-center gap-2'>
+                <a href="https://www.antgroup.com" target="_blank" rel="noopener noreferrer">
+                    <img src={user} alt="" />
+                </a>
+                <p className='poppins-heading font-normal text-sm leading-[21px] tracking-[0%] text-center text-black'>Manage My Account</p>
+            </div >
+        ),
+        key: '0',
+    },
+    {
+        label: (
+            <div className='flex items-center gap-2 pl-1'>
+                <a href="https://www.aliyun.com" target="_blank" rel="noopener noreferrer">
+                    <img src={mallbag} alt="" />
+                </a>
+                <p className='text-black poppins-heading font-normal pt-1 text-sm leading-[21px] tracking-[0%] text-center'>My Order</p>
+            </div>
+        ),
+        key: '1',
+    },
+    {
+        label: (
+            <div className='flex items-center gap-2 pl-1 pt-1'>
+                <a href="https://www.aliyun.com" target='-blank' rel='noopener norefferer'>
+                    <img src={cancel} alt="" />
+                </a>
+                <p className='text-black poppins-heading font-normal text-sm leading-[21px] tracking-[0%] text-center'>My Cancellations</p>
+            </div>
+        ),
+        key: '3',
+    },
+    {
+        label: (
+            <div className='flex items-center gap-2 pl-1 pt-1'>
+                <a href="https://www.aliyun.com" target='-blank' rel='noopener norefferer'>
+                    <img src={reviews} alt="" />
+                </a>
+                <p className='text-black poppins-heading font-normal text-sm leading-[21px] tracking-[0%] text-center'>My Reviews</p>
+            </div>
+        ),
+        key: '4',
+    },
+    {
+        label: (
+            <div className='flex items-center gap-2 pl- pt-1'>
+                <a href="https://www.aliyun.com" target='-blank' rel='noopener norefferer'>
+                    <img src={logout} alt="" />
+                </a>
+                <p className='text-black poppins-heading font-normal text-sm leading-[21px] tracking-[0%] text-center'>My Cancellations</p>
+            </div>
+        ),
+        key: '5',
+    },
+];
 
 const Navbar = () => {
     const [selectedValue, setselectedValue] = useState('eng');
@@ -54,7 +118,13 @@ const Navbar = () => {
                             <div className='flex items-center ml-[24px] gap-[10px]'>
                                 <img src={yure} alt="yure" />
                                 <img src={magazin} alt="magazin" />
-                                <img src={user} alt="user" />
+                                <Dropdown menu={{ items }} trigger={['click']}>
+                                    <a onClick={e => e.preventDefault()}>
+                                        <Space>
+                                                <img className='hover' src={user} alt="user" />
+                                        </Space>
+                                    </a>
+                                </Dropdown>
                             </div>
                         </div>
                     </div>
